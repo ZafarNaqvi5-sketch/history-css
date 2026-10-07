@@ -2,7 +2,7 @@
 
 const APP_DATA = {
   countries: [
-    { id: "pakistan", name: "Pakistan", flag: "🇵🇰", capital: "Islamabad", region: "South Asia", currency: "Pakistani Rupee", languages: ["Urdu", "English"], eventsCount: 33, priority: 1 },
+    { id: "pakistan", name: "Pakistan", flag: "🇵🇰", capital: "Islamabad", region: "South Asia", currency: "Pakistani Rupee", languages: ["Urdu", "English"], eventsCount: 40, priority: 1 },
     { id: "india", name: "India", flag: "🇮🇳", capital: "New Delhi", region: "South Asia", currency: "Indian Rupee", languages: ["Hindi", "English"], eventsCount: 18, priority: 2 },
     { id: "afghanistan", name: "Afghanistan", flag: "🇦🇫", capital: "Kabul", region: "South / Central Asia", currency: "Afghani", languages: ["Pashto", "Dari"], eventsCount: 14, priority: 3 },
     { id: "china", name: "China", flag: "🇨🇳", capital: "Beijing", region: "East Asia", currency: "Renminbi (Yuan)", languages: ["Mandarin"], eventsCount: 12, priority: 4 },
@@ -25,8 +25,14 @@ const APP_DATA = {
       { year: "1948", title: "UN Ceasefire in Kashmir", desc: "UN-brokered ceasefire took effect on 1 January 1949. Ceasefire Line established (later LoC)." },
       { year: "1949", title: "Objectives Resolution", desc: "Passed 12 March 1949 under Liaquat Ali Khan. Became ideological foundation of future constitutions." },
       { year: "1950", title: "Liaquat–Nehru Pact", desc: "Agreement with India on protection of minorities and rights of refugees after Partition." },
+      { year: "1951", title: "Assassination of Liaquat Ali Khan", desc: "First Prime Minister assassinated in Rawalpindi on 16 October 1951. Political instability deepened." },
+      { year: "1952", title: "Bengali Language Movement", desc: "Protests in East Pakistan for recognition of Bengali. Police firing in Dhaka (21 February). Later influenced 1971 crisis." },
+      { year: "1953", title: "Anti-Ahmadi Riots", desc: "Serious communal disturbances in Punjab; martial law briefly imposed in Lahore." },
+      { year: "1954", title: "Constituent Assembly Dissolved", desc: "Governor-General Ghulam Muhammad dissolved the first Constituent Assembly, triggering a constitutional crisis." },
       { year: "1954", title: "SEATO Membership", desc: "Pakistan joined Southeast Asia Treaty Organization (Cold War alliance with the West)." },
-      { year: "1955", title: "Baghdad Pact / CENTO", desc: "Pakistan joined the Baghdad Pact (later CENTO) — mutual defence arrangement with UK, Turkey, Iran, Iraq." },
+      { year: "1955", title: "Bandung Conference", desc: "Pakistan participated in the Asian-African Conference in Indonesia — landmark of Non-Aligned / Afro-Asian solidarity." },
+      { year: "1955", title: "One Unit Scheme", desc: "West Pakistan provinces merged into a single unit to balance East Pakistan. Major political restructuring." },
+      { year: "1955", title: "Baghdad Pact / CENTO", desc: "Pakistan joined the Baghdad Pact (later CENTO) — mutual defence with UK, Turkey, Iran, Iraq." },
       { year: "1956", title: "First Constitution", desc: "Enforced 23 March 1956. Pakistan declared an Islamic Republic; parliamentary system adopted." },
       { year: "1958", title: "First Martial Law (Ayub Khan)", desc: "General Ayub Khan imposed Martial Law on 7 October 1958. Beginning of first military rule." },
       { year: "1960", title: "Indus Waters Treaty", desc: "Signed 19 September 1960 with India, brokered by World Bank. Western rivers to Pakistan, Eastern to India." },
@@ -123,7 +129,8 @@ const APP_DATA = {
       "Nuclear-armed since 1974 / 1998 (Pokhran)",
       "Largest democracy; federal parliamentary republic",
       "Member of BRICS, SCO, G20, Commonwealth, Quad",
-      "Major strategic competitor of Pakistan and China in the region"
+      "Core disputes with Pakistan: Kashmir, terrorism, water (Indus), nuclear rivalry",
+      "Four wars with Pakistan (1947–48, 1965, 1971, Kargil 1999)"
     ],
     landmarkEvents: [
       { year: "1947", title: "Independence & Partition", desc: "India became independent on 15 August 1947. Jawaharlal Nehru first Prime Minister. Partition created Pakistan." },
@@ -202,7 +209,14 @@ const APP_DATA = {
     ],
     geography: ["Capital: New Delhi", "Largest city: Mumbai", "Borders: Pakistan, China, Nepal, Bhutan, Bangladesh, Myanmar", "Key features: Himalayas, Indo-Gangetic plain, Deccan Plateau", "Strategic: Indian Ocean, Andaman, border disputes with China & Pakistan"],
     economy: ["One of the fastest-growing major economies", "Services & IT major contributors", "1991 liberalisation turning point", "Large agricultural base", "Growing manufacturing & defence industry"],
-    international: ["Non-Alignment origins under Nehru", "Strategic partnership with USA (post-2000s)", "Tense relations with China & Pakistan", "Member of BRICS, SCO, Quad, G20", "Major role in Indian Ocean and neighbourhood policy"]
+    international: [
+      "Pakistan: adversarial — Kashmir, four wars, terrorism, water, nuclear",
+      "Key agreements with Pakistan: Indus Waters (1960), Tashkent (1966), Simla (1972), Lahore (1999)",
+      "China: border dispute (1962 war, LAC tensions)",
+      "Strategic partnership with USA (post-2000s); Quad member",
+      "Non-Alignment origins under Nehru; now multi-alignment",
+      "Member of BRICS, SCO, G20, Commonwealth"
+    ]
   },
 
   // ===================== AFGHANISTAN =====================
@@ -265,7 +279,13 @@ const APP_DATA = {
     ],
     geography: ["Capital: Kabul", "Landlocked", "Borders: Pakistan (Durand Line), Iran, Turkmenistan, Uzbekistan, Tajikistan, China", "Key features: Hindu Kush mountains, Helmand River", "Strategic: Gateway between South & Central Asia"],
     economy: ["Heavily aid-dependent historically", "Agriculture & opium historically significant", "Mining potential (lithium, copper, rare earths)", "Severe economic crisis after 2021", "Trade routes via Pakistan important"],
-    international: ["Durand Line dispute with Pakistan", "Refugee flows into Pakistan", "TTP and cross-border militancy issues", "Competition for influence (Pakistan, India, China, Iran, Russia)", "Recognition of Taliban government remains limited"]
+    international: [
+      "Pakistan: Durand Line dispute; millions of refugees; TTP safe-haven concerns",
+      "Pakistan supported mujahideen (1980s) and Taliban (1990s); complex post-2021 ties",
+      "India historically close to anti-Taliban forces; competition with Pakistan for influence",
+      "China, Iran, Russia also key external players",
+      "Recognition of Taliban government remains limited internationally"
+    ]
   },
 
   // ===================== CHINA =====================
@@ -273,9 +293,10 @@ const APP_DATA = {
     keyFacts: [
       "World's second-largest economy; rising superpower",
       "Communist Party of China (CCP) rules since 1949",
-      "All-weather strategic partner of Pakistan",
-      "Belt and Road Initiative (BRI) & CPEC flagship projects",
-      "Border disputes with India; close alignment with Pakistan"
+      "All-weather strategic cooperative partner of Pakistan",
+      "1963 Boundary Agreement with Pakistan; CPEC flagship of BRI",
+      "Consistent diplomatic support to Pakistan on Kashmir",
+      "Border disputes with India (1962 war, LAC); close alignment with Pakistan"
     ],
     landmarkEvents: [
       { year: "1949", title: "People's Republic of China founded", desc: "1 October 1949. Mao Zedong proclaimed the PRC after civil war victory." },
@@ -326,7 +347,13 @@ const APP_DATA = {
     ],
     geography: ["Capital: Beijing", "Largest city: Shanghai", "Borders: 14 countries including India, Pakistan, Afghanistan, Russia", "Key features: Himalayas, Tibetan Plateau, Yellow & Yangtze rivers", "Strategic: South China Sea, Taiwan Strait, land routes via BRI"],
     economy: ["Second-largest economy by nominal GDP", "Manufacturing superpower", "Belt and Road investment globally", "CPEC major corridor into Indian Ocean via Gwadar", "Technology & infrastructure focus under Xi"],
-    international: ["All-weather strategic partnership with Pakistan", "CPEC as flagship of BRI", "Border tensions with India (LAC)", "Major power competition with USA", "Growing role in Central Asia, Middle East, Africa"]
+    international: [
+      "Pakistan: all-weather strategic partnership — 1963 border deal, defence, CPEC, Kashmir diplomacy",
+      "CPEC (2015–): Gwadar, energy, infrastructure — flagship of Belt and Road",
+      "India: border dispute (1962, Doklam, Galwan); strategic rivalry",
+      "Major power competition with USA",
+      "Growing role in Central Asia, Middle East, Africa via BRI"
+    ]
   },
 
   // ===================== IRAN =====================
@@ -381,7 +408,14 @@ const APP_DATA = {
     ],
     geography: ["Capital: Tehran", "Borders: Pakistan, Afghanistan, Turkey, Iraq, Armenia, Azerbaijan, Turkmenistan", "Key features: Zagros & Alborz mountains, Caspian Sea, Persian Gulf", "Strategic: Strait of Hormuz (critical oil chokepoint)"],
     economy: ["Major oil & gas producer", "Sanctions have constrained growth", "Diversification attempts ongoing", "Potential energy cooperation with Pakistan (IP gas pipeline idea)"],
-    international: ["First to recognise Pakistan (1947)", "Supported Pakistan in 1965 & 1971 wars", "Post-1979: generally stable but cautious ties", "Shared concerns over Baloch militancy", "Differences over Afghanistan influence; sectarian sensitivities"]
+    international: [
+      "Pakistan: first country to recognise Pakistan (1947); supported in 1965 & 1971 wars",
+      "Both were CENTO members before 1979 Revolution",
+      "Post-1979: generally stable but cautious; occasional border incidents (e.g. 2024)",
+      "Shared interest in containing Baloch militant groups",
+      "Differences over Afghanistan; sectarian (Sunni–Shia) sensitivities",
+      "Energy potential (IP gas pipeline idea); both non-Arab Muslim states"
+    ]
   },
 
   // ===================== REVISION & FLASHCARDS =====================
