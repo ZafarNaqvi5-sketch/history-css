@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="History Knowledge App for CSS - Pakistan, India, Afghanistan, Iran, China" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>History CSS</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="icons/icon-192.png" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <h1 id="page-title">History CSS</h1>
+      <button id="search-btn" class="icon-btn" aria-label="Search">🔍</button>
+    </header>
+
+    <!-- Main Content -->
+    <main id="content" class="content">
+      <!-- Home will be injected here -->
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-page="home">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Home</span>
+      </button>
+      <button class="nav-item" data-page="countries">
+        <span class="nav-icon">🌍</span>
+        <span class="nav-label">Countries</span>
+      </button>
+      <button class="nav-item" data-page="revision">
+        <span class="nav-icon">⚡</span>
+        <span class="nav-label">Revision</span>
+      </button>
+      <button class="nav-item" data-page="flashcards">
+        <span class="nav-icon">🃏</span>
+        <span class="nav-label">Cards</span>
+      </button>
+      <button class="nav-item" data-page="more">
+        <span class="nav-icon">☰</span>
+        <span class="nav-label">More</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Search Modal -->
+  <div id="search-modal" class="modal hidden">
+    <div class="modal-content">
+      <input type="search" id="search-input" placeholder="Search events, leaders, dates..." autofocus />
+      <div id="search-results"></div>
+      <button id="close-search" class="btn">Close</button>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
