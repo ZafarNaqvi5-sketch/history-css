@@ -1,4 +1,4 @@
-const CACHE_NAME = "history-css-v5";
+const CACHE_NAME = "history-css-v6";
 const ASSETS = [
   "./",
   "./index.html",
